@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0F0F0F;
+    font-family: 'Roboto', sans-serif;
+    color: #A8A8A8;
+    min-height: 750px;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+header {
+    position: absolute;
+    left: 50px;
+    text-align: left;
+    max-width: 450px;
+}
+
+.eyeballsTop {
+    position: relative;
+    top: -200px;
+    left: 200px;
+}
+
+h1 {
+    font-family: 'Eater', serif;
+    color: #CA3636;
+    font-size: 36px;
+}
+
+.subtitle {
+    color: #A8A8A8;
+    font-size: 18px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.ghostLeft {
+    overflow: hidden;
+    position: absolute;
+    right: 300px;
+    bottom: -700px;
+    height: auto;
+}
+
+form {
+    background-color: rgba(36, 36, 36, 0.70);
+    padding: 38px 53px;
+    border-radius: 8px;
+    margin-left: 600px;
+    width: 510px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formGroup {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    color: #A8A8A8;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+input[type = "text"],
+input[type = "number"] {
+    padding: 8px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(168, 168, 168, 0.40);
+    color: #A8A8A8;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+input[type = "text"]::placeholder,
+input[type = "number"]::placeholder {
+    color: rgba(168, 168, 168, 0.60);
+    font-size: 16px;
+}
+
+input[type = "text"]:focus,
+input[type = "number"]:focus {
+    outline: none;
+    border-bottom: solid #CA3636;
+}
+
+input[type = "submit"] {
+    width: 100%;
+    padding: 16px;
+    background-color: #434343;
+    border: none;
+    border-radius: 8px;
+    color: #A8A8A8;
+    font-family: 'Eater', serif;
+    font-size: 16px;
+}
+
+input[type = "submit"]:hover {
+    background-color: #CA3636;
+    color: #FFFFFF;
+}

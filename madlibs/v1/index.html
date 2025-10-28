@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML/CSS Production for MadLibs</title>
+    
+    <!-- Normalize -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eater&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Style sheet -->
+    <link href = "styles.css" rel = "stylesheet">
+
+    <!-- JS File -->
+    <script src = "script.js" defer></script> 
+</head>
+
+<body>
+    <header>
+        <img src = "images/eyeballs1.png" alt = "eyeballs at top" width = "222px" height = "138px" class = "eyeballsTop">
+        
+        <h1>THE HAUNTED HOUR</h1>
+        <p class = "subtitle">Fill in the blanks to create a haunted story...</p>
+
+        <img src = "images/ghost.png" alt = "ghost" width = "264px" height = "198px" class = "ghostLeft">
+    </header>
+
+    <main>
+        <form id = "madlibForm">
+            <div class = "formGroup">
+                <label for = "adjective">ADJECTIVE</label>
+                <input type = "text" id = "adjective" placeholder = "Think of a spooky or weird one" required>
+            </div>
+
+            <div class = "formGroup">
+                <label for = "noun">NOUN</label>
+                <input type = "text" id = "noun" placeholder = "Perhaps something you'd find in an old house" required>
+            </div>
+
+            <div class = "formGroup">
+                <label for = "verb">VERB ENDING IN -ING</label>
+                <input type = "text" id = "verb" placeholder = "Don't overthink it!" required>
+            </div>
+
+            <div class = "formGroup">
+                <label for = "creature">CREATURE</label>
+                <input type = "text" id = "creature" placeholder = "Real or imaginary" required>
+            </div>
+
+            <div class = "formGroup">
+                <label for = "bodyPart">BODY PART</label>
+                <input type = "text" id = "bodyPart" placeholder = "Enter any part" required>
+            </div>
+
+            <div class = "formGroup">
+                <label for = "number">NUMBER</label>
+                <input type = "number" id = "number" placeholder = "Any number will do" required>
+            </div>
+
+            <div class = "formGroup">
+                <label for = "object">OBJECT</label>
+                <input type = "text" id = "object" placeholder = "Something you could throw" required>
+            </div>
+
+            <input type = "submit" value = "SUBMIT">
+        </form>
+    </main>
+<!-- 
+    <section class = "storyOverlay" id = "storyOverlay">
+        <div class = "storyContainer">
+            <h2 class = "storyTitle">THE HAUNTED HOUR</h2>
+            <p class = "storyText">
+                It was a <span class = "userInput" id = "storyAdjective"></span> night when I found the old <span class = "userInput" id = "storyNoun"></span> hidden in the attic. As soon as I touched it, I heard <span class = "userInput" id = "storyVerb"></span> noises coming from the walls. Out of nowhere, a <span class = "userInput" id = "storyCreature"></span> crawled out of the shadows, whispering my name. I tried to run, but my <span class = "userInput" id = "storyBodyPart"></span> wouldn't move! There were <span class = "userInput" id = "storyNumber"></span> glowing eyes staring at me from the dark. Desperately, I grabbed the nearest <span class = "userInput" id = "storyObject"></span> but right after that, the lights went out.
+            </p>
+            
+            <img src = "images/ghost.png" alt = "centered ghost" width = "342px" height = "645px" class = "ghostCentered">
+            <img src = "images/scratchMarks.png" alt = "scratch marks" width = "175px" height = "118px" class = "scratchMarks">
+            <img src = "images/eyeballs2.png" alt = "eyeballs at bottom" width = "265px" height = "156px" class = "eyeballsBottom">
+        </div>
+    </section> -->
+</body>
+</html>
