@@ -18,13 +18,13 @@ header h1 {
 }
 
 main {
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
 
 article {
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
 }
 
 h2 {
