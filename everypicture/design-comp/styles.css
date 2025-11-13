@@ -1,0 +1,43 @@
+body {
+    font-family: 'Rethink Sans', sans-serif;
+    background-color: #FCFCFC;
+    margin: 0 auto;
+    padding: 40px 20px;
+    max-width: 800px;
+    text-align: center;
+}
+
+h1 {
+    color: #1E56CD;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 40px 0;
+}
+
+h2 {
+    color: #161616;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 30px 0 20px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+ul {
+    text-align: left;
+    margin: 0 auto 40px auto;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+li {
+    margin-bottom: 8px;
+    color: #161616;
+}
