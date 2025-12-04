@@ -2,6 +2,7 @@
     "use strict";
     console.log("reading js");
     
+    // array of food images
     const foodImages = [
         "images/bunbohue.png",
         "images/hotpot.png",
@@ -16,6 +17,7 @@
     let clickCount = 0;
     let currentDishes = 1;
     
+    // calculates random positioning within viewport bounds
     function getRandomPosition() {
         const imageSize = 280;
         const padding = 20;
@@ -28,6 +30,7 @@
         };
     }
     
+    // creates and appends food images at random positions
     function addRandomFood() {
         const container = document.querySelector("#foodContainer");
         const randomIndex = Math.floor(Math.random() * foodImages.length);
@@ -43,6 +46,7 @@
         container.appendChild(image);
     }
     
+    // multiplies dishes by 1.5x after each user click and makes them appear with staggered timing
     function addMultipleFoods() {
         clickCount++;
         
@@ -52,6 +56,7 @@
             currentDishes = Math.round(currentDishes * 1.5);
         }
         
+        // staggers the food dishes with 50ms delay between each dish
         for (let i = 0; i < currentDishes; i++) {
             setTimeout(function() {
                 addRandomFood();
@@ -61,6 +66,7 @@
         console.log(`Click ${clickCount}: Adding ${currentDishes} food items`);
     }
     
+    // attaches click handler to button once DOM is ready
     document.addEventListener("DOMContentLoaded", function() {
         const button = document.querySelector("#foodButton");
         
