@@ -13,8 +13,8 @@
         "images/steak.png"
     ];
     
-    const button = document.getElementById("foodButton");
-    const container = document.getElementById("foodContainer");
+    let clickCount = 0;
+    let currentDishes = 1;
     
     function getRandomPosition() {
         const imageSize = 280;
@@ -29,11 +29,12 @@
     }
     
     function addRandomFood() {
+        const container = document.querySelector("#foodContainer");
         const randomIndex = Math.floor(Math.random() * foodImages.length);
         const foodImage = foodImages[randomIndex];
         const position = getRandomPosition();
-        
         const image = document.createElement("img");
+
         image.src = foodImage;
         image.className = "foodImage";
         image.style.left = `${position.x}px`;
@@ -42,7 +43,29 @@
         container.appendChild(image);
     }
     
-    if (button) {
-        button.addEventListener("click", addRandomFood);
+    function addMultipleFoods() {
+        clickCount++;
+        
+        if (clickCount === 1) {
+            currentDishes = 1;
+        } else {
+            currentDishes = Math.round(currentDishes * 1.5);
+        }
+        
+        for (let i = 0; i < currentDishes; i++) {
+            setTimeout(function() {
+                addRandomFood();
+            }, i * 50);
+        }
+        
+        console.log(`Click ${clickCount}: Adding ${currentDishes} food items`);
     }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const button = document.querySelector("#foodButton");
+        
+        if (button) {
+            button.addEventListener("click", addMultipleFoods);
+        }
+    });
 })();
