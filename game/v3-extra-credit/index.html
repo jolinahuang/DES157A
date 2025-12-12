@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game On HTML/CSS Production</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400..800&display=swap" rel="stylesheet">
+
+    <link href="styles.css" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <section id = "selectionScreen" class = "screen active">
+            <h1>Tic Tac Toe</h1>
+            <p class = "subtitle">Place down your character until you have 3 in a row!</p>
+
+            <div id = "playerSelection">
+                <h2 id = "selectionTitle">Player 1: Choose your character</h2>
+                
+                <div class = "characterOptions">
+                    <button class = "characterButton" data-character = "cat">
+                        <img src = "images/cat.png" alt = "Cat character" width = "100" height = "100" class = "characterIcon">
+                    </button>
+                    <button class = "characterButton" data-character = "dumpling">
+                        <img src = "images/dumpling.png" alt = "Dumpling character" width = "100" height = "100" class = "characterIcon">
+                    </button>
+                    <button class = "characterButton" data-character = "star">
+                        <img src = "images/star.png" alt = "Star character" width = "100" height = "100" class = "characterIcon">
+                    </button>
+                    <button class = "characterButton" data-character = "letter">
+                        <img src = "images/letter.png" alt = "Letter character" width = "100" height = "100" class = "characterIcon">
+                    </button>
+                </div>
+
+                <div class = "buttonContainer">
+                    <button id = "selectNextPlayerButton" class = "startButton" style = "display: none;">Select Next Player</button>
+                    <button id = "startGameButton" class = "startButton" style = "display: none;">Start Game</button>
+                </div>
+            </div>
+        </section>
+
+        <section id = "gameScreen" class = "screen">
+            <div class = "gameContainer">
+                <aside class = "playerInfo">
+                    <p id = "player1Text">It's Player 1's turn!</p>
+                    <div class = "playerIconDisplay" id = "player1IconDisplay">
+                        <img id = "player1Icon" src = "images/cat.png" alt = "Player 1 character" width = "90" height = "90">
+                    </div>
+                </aside>
+
+                <div class = "boardContainer">
+                    <div id = "gameBoard">
+                        <div class = "cell" data-cell = "0"></div>
+                        <div class = "cell" data-cell = "1"></div>
+                        <div class = "cell" data-cell = "2"></div>
+                        <div class = "cell" data-cell = "3"></div>
+                        <div class = "cell" data-cell = "4"></div>
+                        <div class = "cell" data-cell = "5"></div>
+                        <div class = "cell" data-cell = "6"></div>
+                        <div class = "cell" data-cell = "7"></div>
+                        <div class = "cell" data-cell = "8"></div>
+                    </div>
+                </div>
+
+                <aside class = "playerInfo nextPlayer">
+                    <p id = "player2Text">Your turn is next...</p>
+                    <div class = "playerIconDisplay" id = "player2IconDisplay">
+                        <img id = "player2Icon" src = "images/star.png" alt = "Player 2 character" width = "90" height = "90">
+                    </div>
+                </aside>
+            </div>
+
+            <footer class = "scoreContainer">
+                <div class = "scoreInfo">
+                    <p class = "scoreLabel">Score</p>
+                    <p class = "scoreDisplay">
+                        <span id = "player1Score">0</span> | <span id = "player2Score">0</span>
+                    </p>
+                </div>
+                <button id = "endGameButton" class = "endButton">End Game</button>
+            </footer>
+        </section>
+
+        <aside id = "winnerModal" class = "modal">
+            <div class = "modalContent">
+                <h2 id = "winnerText">Player 1 Wins!</h2>
+                <div id = "winnerIcon">
+                    <img id = "winnerIconImage" src = "images/cat.png" alt = "Winner character" width = "120" height = "120">
+                </div>
+                <button id = "playAgainButton" class = "startButton">Play Again</button>
+            </div>
+        </aside>
+
+        <aside id = "exitModal" class = "modal">
+            <div class = "modalContent">
+                <h2>Exit game?</h2>
+                <p>Are you sure you want to end the game?</p>
+                <div class = "modalButtons">
+                    <button id = "cancelExitButton" class = "startButton secondary">Cancel</button>
+                    <button id = "confirmExitButton" class = "startButton">Exit</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
