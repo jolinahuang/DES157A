@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game On HTML/CSS Production</title>
+    <title>Game On Extra Credit Final</title>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 
-    <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400..800&display=swap" rel="stylesheet">
@@ -19,25 +18,43 @@
 
 <body>
     <main>
-        <section id = "selectionScreen" class = "screen active">
+        <section id = "welcomeScreen" class = "screen active">
+            <div class = "welcomeContainer">
+                <div class = "floatingCharacters">
+                    <img src = "images/star.png" alt = "Star character" class = "floatingChar star">
+                    <img src = "images/dumpling.png" alt = "Dumpling character" class = "floatingChar dumpling">
+                    <img src = "images/cat.png" alt = "Cat character" class = "floatingChar cat">
+                    <img src = "images/letter.png" alt = "Letter character" class = "floatingChar letter">
+                </div>
+                
+                <h1 class = "welcomeTitle">Tic Tac Toe</h1>
+                <button id = "chooseCharactersButton" class = "welcomeButton">Choose Your Characters</button>
+            </div>
+        </section>
+
+        <section id = "selectionScreen" class = "screen">
             <h1>Tic Tac Toe</h1>
             <p class = "subtitle">Place down your character until you have 3 in a row!</p>
 
             <div id = "playerSelection">
-                <h2 id = "selectionTitle">Player 1: Choose your character</h2>
+                <h2 id = "selectionTitle">Player 1: Choose Your Character</h2>
                 
                 <div class = "characterOptions">
                     <button class = "characterButton" data-character = "cat">
                         <img src = "images/cat.png" alt = "Cat character" width = "100" height = "100" class = "characterIcon">
+                        <span class = "characterName">Meow</span>
                     </button>
                     <button class = "characterButton" data-character = "dumpling">
                         <img src = "images/dumpling.png" alt = "Dumpling character" width = "100" height = "100" class = "characterIcon">
+                        <span class = "characterName">Bao</span>
                     </button>
                     <button class = "characterButton" data-character = "star">
                         <img src = "images/star.png" alt = "Star character" width = "100" height = "100" class = "characterIcon">
+                        <span class = "characterName">Twinkle</span>
                     </button>
                     <button class = "characterButton" data-character = "letter">
                         <img src = "images/letter.png" alt = "Letter character" width = "100" height = "100" class = "characterIcon">
+                        <span class = "characterName">Cupid</span>
                     </button>
                 </div>
 
@@ -49,11 +66,26 @@
         </section>
 
         <section id = "gameScreen" class = "screen">
+            <header class = "gameHeader">
+                <div class = "headerScore">
+                    <span id = "player1NameHeader">Meow</span>
+                    <span class = "scoreDisplay">
+                        <span id = "player1Score">0</span> | <span id = "player2Score">0</span>
+                    </span>
+                    <span id = "player2NameHeader">Twinkle</span>
+                </div>
+            </header>
+
             <div class = "gameContainer">
                 <aside class = "playerInfo">
-                    <p id = "player1Text">It's Player 1's turn!</p>
+                    <p id = "player1Text">It's Meow's turn!</p>
                     <div class = "playerIconDisplay" id = "player1IconDisplay">
                         <img id = "player1Icon" src = "images/cat.png" alt = "Player 1 character" width = "90" height = "90">
+                    </div>
+                    <div class = "turnIndicator" id = "player1Indicator">
+                        <svg width = "60" height = "60" viewBox = "0 0 60 60">
+                            <polygon points = "30,15 45,40 15,40" fill = "#1E56CD"/>
+                        </svg>
                     </div>
                 </aside>
 
@@ -72,20 +104,19 @@
                 </div>
 
                 <aside class = "playerInfo nextPlayer">
-                    <p id = "player2Text">Your turn is next...</p>
+                    <p id = "player2Text">Twinkle's turn is next...</p>
                     <div class = "playerIconDisplay" id = "player2IconDisplay">
                         <img id = "player2Icon" src = "images/star.png" alt = "Player 2 character" width = "90" height = "90">
+                    </div>
+                    <div class = "turnIndicator" id = "player2Indicator" style = "display: none;">
+                        <svg width = "60" height = "60" viewBox = "0 0 60 60">
+                            <polygon points = "30,15 45,40 15,40" fill = "#1E56CD"/>
+                        </svg>
                     </div>
                 </aside>
             </div>
 
-            <footer class = "scoreContainer">
-                <div class = "scoreInfo">
-                    <p class = "scoreLabel">Score</p>
-                    <p class = "scoreDisplay">
-                        <span id = "player1Score">0</span> | <span id = "player2Score">0</span>
-                    </p>
-                </div>
+            <footer class = "gameFooter">
                 <button id = "endGameButton" class = "endButton">End Game</button>
             </footer>
         </section>
